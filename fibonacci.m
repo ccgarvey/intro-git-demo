@@ -4,14 +4,10 @@ function value = fibonacci(index)
         error(sprintf('Fibonacci requires positive index, got %d', index))
     end
     
-    previous = 0;
-    current = 1;
+    index = index - 1;
     
-    for i=2:index
-        temp = current;
-        current = previous + current;
-        previous = temp;
-    end
+    golden = (1 + sqrt(5))/2;
+    conjugate = (1 - sqrt(5))/2;
     
-    value = current;
+    value = round((golden^index - conjugate^index)/sqrt(5));
 end
