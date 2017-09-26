@@ -5,7 +5,7 @@ function value = fibonacci(index)
     end
     
     previous = 0;
-    current = 1;
+    previous = 1;
     
     for i=2:index
         temp = current;
